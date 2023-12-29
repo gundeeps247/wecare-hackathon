@@ -5,7 +5,7 @@
 /* Your custom styles go here */
 @layer base{
     section{
-        @apply py-[75px];
+        apply py-[75px];
         
     }
 }
