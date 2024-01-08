@@ -16,7 +16,7 @@ import About from "../components/About/About";
 import ServiceList from "../components/Services/ServiceList";
 import DoctorList from "../components/Doctors/DoctorList";
 import FaqList from "../components/Faq/FaqList";
-// import Testimonial from "../Components/Testimonial/Testimonial";
+import Testimonial from "../Components/Testimonial/Testimonial";
 
 const Home = () => {
   return (
@@ -318,7 +318,7 @@ const Home = () => {
               expert health care.
             </p>
           </div> 
-          {/* <Testimonial /> */}
+          <Testimonial />
         </div>
       </section> 
       {/* ============== testimonial end ===================== */}

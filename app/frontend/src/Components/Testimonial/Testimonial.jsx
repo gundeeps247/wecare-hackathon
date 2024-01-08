@@ -1,7 +1,7 @@
-
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
- import SwiperCore, { Pagination } from 'swiper/core';
+import SwiperCore from 'swiper/core';
+import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/swiper-bundle.css';
@@ -18,7 +18,7 @@ const Testimonial = () => {
       <Swiper
         modules={[Pagination]}
         spaceBetween={30}
-        slidesPerView={1} // Corrected from sliderPerViews to slidesPerView
+        slidesPerView={1}
         pagination={{ clickable: true }}
         breakpoints={{
           640: {
@@ -35,89 +35,93 @@ const Testimonial = () => {
           },
         }}
       >
-         <SwiperSlide>
-          <div className='py-[30px] px-5 rounded-3'></div>
-          <div className='flex items-center gap-[13px]'>
-            <img src={patientAvatar} alt='' />
-            <div>
-              <h4 className='text-[18px] leading-[30px] font-semibold text-headingColor'>
-                Muhibur Rahman
-              </h4>
-              <div className='flex items-center gap-[2px]'>
-                <HiStar className='text-yellowColor w-[18px] h-5' />
-                <HiStar className='text-yellowColor w-[18px] h-5' />
-                <HiStar className='text-yellowColor w-[18px] h-5' />
-                <HiStar className='text-yellowColor w-[18px] h-5' />
-                <HiStar className='text-yellowColor w-[18px] h-5' />
+        <SwiperSlide>
+          <div className='py-[30px] px-5 rounded-3'>
+            <div className='flex items-center gap-[13px]'>
+              <img src={patientAvatar} alt='' />
+              <div>
+                <h4 className='text-[18px] leading-[30px] font-semibold text-headingColor'>
+                  Muhibur Rahman
+                </h4>
+                <div className='flex items-center gap-[2px]'>
+                  <HiStar className='text-yellowColor w-[18px] h-5' />
+                  <HiStar className='text-yellowColor w-[18px] h-5' />
+                  <HiStar className='text-yellowColor w-[18px] h-5' />
+                  <HiStar className='text-yellowColor w-[18px] h-5' />
+                  <HiStar className='text-yellowColor w-[18px] h-5' />
+                </div>
               </div>
             </div>
+            <p className='text-[16px] leading-7 mt-4 text-textColor font-[400]'>
+              "I have taken medical service"
+            </p>
           </div>
-          <p className='text-[16px] leading-7 mt-4 text-textColor font-[400]'>
-            "I have taken medical service"
-          </p>
         </SwiperSlide>
         <SwiperSlide>
-          <div className='py-[30px] px-5 rounded-3'></div>
-          <div className='flex items-center gap-[13px]'>
-            <img src={patientAvatar} alt='' />
-            <div>
-              <h4 className='text-[18px] leading-[30px] font-semibold text-headingColor'>
-                Muhibur Rahman
-              </h4>
-              <div className='flex items-center gap-[2px]'>
-                <HiStar className='text-yellowColor w-[18px] h-5' />
-                <HiStar className='text-yellowColor w-[18px] h-5' />
-                <HiStar className='text-yellowColor w-[18px] h-5' />
-                <HiStar className='text-yellowColor w-[18px] h-5' />
-                <HiStar className='text-yellowColor w-[18px] h-5' />
+          <div className='py-[30px] px-5 rounded-3'>
+            <div className='flex items-center gap-[13px]'>
+              <img src={patientAvatar} alt='' />
+              <div>
+                <h4 className='text-[18px] leading-[30px] font-semibold text-headingColor'>
+                  Muhibur Rahman
+                </h4>
+                <div className='flex items-center gap-[2px]'>
+                  <HiStar className='text-yellowColor w-[18px] h-5' />
+                  <HiStar className='text-yellowColor w-[18px] h-5' />
+                  <HiStar className='text-yellowColor w-[18px] h-5' />
+                  <HiStar className='text-yellowColor w-[18px] h-5' />
+                  <HiStar className='text-yellowColor w-[18px] h-5' />
+                </div>
               </div>
             </div>
+            <p className='text-[16px] leading-7 mt-4 text-textColor font-[400]'>
+              "I have taken medical service"
+            </p>
           </div>
-          <p className='text-[16px] leading-7 mt-4 text-textColor font-[400]'>
-            "I have taken medical service"
-          </p>
         </SwiperSlide>
         <SwiperSlide>
-          <div className='py-[30px] px-5 rounded-3'></div>
-          <div className='flex items-center gap-[13px]'>
-            <img src={patientAvatar} alt='' />
-            <div>
-              <h4 className='text-[18px] leading-[30px] font-semibold text-headingColor'>
-                Muhibur Rahman
-              </h4>
-              <div className='flex items-center gap-[2px]'>
-                <HiStar className='text-yellowColor w-[18px] h-5' />
-                <HiStar className='text-yellowColor w-[18px] h-5' />
-                <HiStar className='text-yellowColor w-[18px] h-5' />
-                <HiStar className='text-yellowColor w-[18px] h-5' />
-                <HiStar className='text-yellowColor w-[18px] h-5' />
+          <div className='py-[30px] px-5 rounded-3'>
+            <div className='flex items-center gap-[13px]'>
+              <img src={patientAvatar} alt='' />
+              <div>
+                <h4 className='text-[18px] leading-[30px] font-semibold text-headingColor'>
+                  Muhibur Rahman
+                </h4>
+                <div className='flex items-center gap-[2px]'>
+                  <HiStar className='text-yellowColor w-[18px] h-5' />
+                  <HiStar className='text-yellowColor w-[18px] h-5' />
+                  <HiStar className='text-yellowColor w-[18px] h-5' />
+                  <HiStar className='text-yellowColor w-[18px] h-5' />
+                  <HiStar className='text-yellowColor w-[18px] h-5' />
+                </div>
               </div>
             </div>
+            <p className='text-[16px] leading-7 mt-4 text-textColor font-[400]'>
+              "I have taken medical service"
+            </p>
           </div>
-          <p className='text-[16px] leading-7 mt-4 text-textColor font-[400]'>
-            "I have taken medical service"
-          </p>
         </SwiperSlide>
         <SwiperSlide>
-          <div className='py-[30px] px-5 rounded-3'></div>
-          <div className='flex items-center gap-[13px]'>
-            <img src={patientAvatar} alt='' />
-            <div>
-              <h4 className='text-[18px] leading-[30px] font-semibold text-headingColor'>
-                Muhibur Rahman
-              </h4>
-              <div className='flex items-center gap-[2px]'>
-                <HiStar className='text-yellowColor w-[18px] h-5' />
-                <HiStar className='text-yellowColor w-[18px] h-5' />
-                <HiStar className='text-yellowColor w-[18px] h-5' />
-                <HiStar className='text-yellowColor w-[18px] h-5' />
-                <HiStar className='text-yellowColor w-[18px] h-5' />
+          <div className='py-[30px] px-5 rounded-3'>
+            <div className='flex items-center gap-[13px]'>
+              <img src={patientAvatar} alt='' />
+              <div>
+                <h4 className='text-[18px] leading-[30px] font-semibold text-headingColor'>
+                  Muhibur Rahman
+                </h4>
+                <div className='flex items-center gap-[2px]'>
+                  <HiStar className='text-yellowColor w-[18px] h-5' />
+                  <HiStar className='text-yellowColor w-[18px] h-5' />
+                  <HiStar className='text-yellowColor w-[18px] h-5' />
+                  <HiStar className='text-yellowColor w-[18px] h-5' />
+                  <HiStar className='text-yellowColor w-[18px] h-5' />
+                </div>
               </div>
             </div>
+            <p className='text-[16px] leading-7 mt-4 text-textColor font-[400]'>
+              "I have taken medical service"
+            </p>
           </div>
-          <p className='text-[16px] leading-7 mt-4 text-textColor font-[400]'>
-            "I have taken medical service"
-          </p>
         </SwiperSlide>
       </Swiper>
     </div>
