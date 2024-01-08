@@ -1,8 +1,10 @@
-import React from 'react'
-import doctorImg from '../../assets/images/doctor-img02.png'
-import starIcon from '../../assets/images/Star.png'
+import React, { useState } from 'react';
+import doctorImg from '../../assets/images/doctor-img02.png';
+import starIcon from '../../assets/images/Star.png';
 
 const DoctorDetails = () => {
+  const [tab, setTab] = useState('about');
+
   return (
     <section>
       <div className="max-w-[1170px] px-5 mx-auto">
@@ -13,7 +15,7 @@ const DoctorDetails = () => {
                 <img src={doctorImg} alt="" className="w-full" />
               </figure>
               <div>
-                <span className="bg-[#CCF0F3] ☐text-irisBlueColor py-1 px-6 lg:py-2 1g:px-6 text-[12px]
+                <span className="bg-[#CCF0F3] text-irisBlueColor py-1 px-6 lg:py-2 lg:px-6 text-[12px]
                 leading-4 lg:text-[16px] lg:leading-7 font-semibold rounded">
                   Surgeon
                 </span>
@@ -34,14 +36,33 @@ const DoctorDetails = () => {
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Dicta, alias!
                 </p>
+              </div>
+            </div>
+
+            <div className="mt-8 border-b border-solid border-[#0066ff34]">
+              <button
+                onClick={() => setTab('about')}
+                className={`py-2 px-5 mr-5 text-[16px] leading-7 font-semibold ${
+                  tab === 'about' && 'border-b border-solid border-primaryColor'
+                }`}
+              >
+                About
+              </button>
+              <button
+                onClick={() => setTab('feedback')}
+                className={`py-2 px-5 mr-5 text-[16px] leading-7 font-semibold ${
+                  tab === 'feedback' && 'border-b border-solid border-primaryColor'
+                }`}
+              >
+                Feedback
+              </button>
             </div>
           </div>
+          <div></div>
         </div>
-        <div></div>
       </div>
-    </div>
-    </section >
+    </section>
   );
 };
 
-export default DoctorDetails
+export default DoctorDetails;
