@@ -10,7 +10,7 @@ body {
   font-family: "Manrope", sans-serif;
 }
 
-/* .swiper-pagination-bullet{
+.swiper-pagination-bullet{
   width: 12px !important;
   height: 12px !important;
   border: 1px solid #181a1e !important;
@@ -27,21 +27,21 @@ body {
   padding-bottom:70px !important ;
 }
 
-.swiper-slider.swiper-slider-next{
+.swiper-slide.swiper-slide-next{
   background: #0067ff ;
   border-radius: 12px;
   box-shadow: 0px 20px 70px rgba(0, 103, 255, 0.3) !important;
 }
 
-.swiper-slider.swiper-slider-next h4,
-.swiper-slider.swiper-slider-next p{
+.swiper-slide.swiper-slide-next h4,
+.swiper-slide.swiper-slide-next p{
   color: #fff !important;
 }
 
 .swiper-pagination{
-  top: 990% !important;
+  top: 90% !important;
 }
- */
+
 
 .sticky__header{
   width: 100%;
