@@ -1,7 +1,7 @@
 import React from "react";
 import userImg from "../../assets/images/doctor-img01.png";
 
-const MyAccount = () => {
+const MyAccount = () => {cc
   return (
     <div className="max-w-[1170px] px-5 mx-auto">
       <div className="grid md:grid-cols-3 gap-10">
