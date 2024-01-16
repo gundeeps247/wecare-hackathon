@@ -92,7 +92,7 @@ const Login = () => {
               type="submit"
               className="w-full bg-primaryColor text-white text-[18px] leading-[30px] rounded-lg px-4 py-2"
             >
-              {loading? <HashLoader /> : 'Login'}
+              {loading? <HashLoader size ={25} color='#fff'/> : 'Login'}
             </button>
           </div>
           <p className="mt-5 text-textColor text-center">
