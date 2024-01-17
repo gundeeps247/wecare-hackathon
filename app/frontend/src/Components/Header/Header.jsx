@@ -18,6 +18,14 @@ const navLink = [
     path: '/contact/',
     display: 'Contact',
   },
+  {
+    path: 'https://healersquad.netlify.app/', 
+    display: 'Nearby',
+  },
+  {
+    path: 'https://ghost-rkn5.vercel.app/', 
+    display: 'Meet',
+  },
 ]
 
 const Header = () => {
