@@ -26,6 +26,10 @@ const navLink = [
     path: 'https://ghost-rkn5.vercel.app/', 
     display: 'Meet',
   },
+  {
+    path: 'https://qrhospitals.netlify.app', 
+    display: 'QR Code',
+  },
 ]
 
 const Header = () => {
