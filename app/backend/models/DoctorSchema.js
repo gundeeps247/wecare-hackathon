@@ -10,13 +10,11 @@ const DoctorSchema = new mongoose.Schema({
   role: {
     type: String,
   },
-
   // Fields for doctors only
   specialization: { type: String },
   qualifications: {
-    type: Array,
+    type: String,
   },
-
   experiences: {
     type: Array,
   },
@@ -31,7 +29,6 @@ const DoctorSchema = new mongoose.Schema({
   },
   totalRating: {
     type: Number,
-    default: 0,
   },
   isApproved: {
     type: String,

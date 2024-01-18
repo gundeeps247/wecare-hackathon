@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import axios from 'axios'; // Import Axios
 
 import { useNavigate } from "react-router-dom";
 import uploadImageToCloudinary from "../../utils/uploadCloudinary";
@@ -40,25 +40,22 @@ const Profile = ({user}) => {
     setFormData({...formData, photo:data.url})
     
   };
-
   const submitHandler = async (event) => {
     event.preventDefault();
     setLoading(true)
 
     try {
-      const res = await fetch(`${BASE_URL}/users/${user._id}`,{
-        method:'put',
-        headers:{
-          'Content-Type':'application/json',
-          Authorization:`Bearer${token}`
+      const res = await axios.put(`${BASE_URL}/users/${user._id}`, formData, {
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
         },
-        body:JSON.stringify(formData)
-      })
+      });
 
-      const {message} = await res.json()
+      const { message } = res.data;
 
-      if(!res.ok){
-        throw new Error(message)
+      if (!res.data.ok) {
+        throw new Error(message);
       }
 
       setLoading(false)
@@ -70,9 +67,10 @@ const Profile = ({user}) => {
       setLoading(false)
     }
 
-    
+
   };
   return (
+ 
     <div className="mt-10">
      <form onSubmit={submitHandler}>
               <div className="mb-5">
