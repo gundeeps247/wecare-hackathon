@@ -1,8 +1,24 @@
-import DoctorCard from "../../Components/Doctors/DoctorCard";
-import { doctors } from "../../assets/data/doctors"
+import DoctorCard from "../../Components/Doctors/DoctorCard"
 import Testimonial from "../../Components/Testimonial/Testimonial";
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const Doctors = () => {
+  const [doctors, setDoctors] = useState([]);
+  useEffect(() => {
+    const fetchDoctors = async () => {
+      try {
+        const response = await axios.get('http://localhost:5001/api/v1/doctors');
+        // console.log(response.data)
+        setDoctors(response.data.data);
+   // Assuming your API response is an array of doctors
+      } catch (error) {
+        console.error('Error fetching doctors:', error);
+      }
+    };
+
+    fetchDoctors();
+  }, []); 
   return (
     <>
       <section className='bg-[#fff9ea]'>

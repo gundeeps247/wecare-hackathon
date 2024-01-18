@@ -19,12 +19,42 @@ const Signup = () => {
     photo: selectedFile,
     gender: "",
     role: "patient",
+    totalRating:0,
+    qualifications: "",
+    timeSlots: [''],
   });
-
   const navigate = useNavigate()
 
+  const handleTimeSlotChange = (e, index) => {
+    const newTimeSlots = [...formData.timeSlots];
+    newTimeSlots[index] = e.target.value;
+    setFormData({ ...formData, timeSlots: newTimeSlots });
+  };
+
+  const addTimeSlot = () => {
+    setFormData({ ...formData, timeSlots: [...formData.timeSlots, ""] });
+  };
+
+  const removeTimeSlot = (index) => {
+    const newTimeSlots = [...formData.timeSlots];
+    newTimeSlots.splice(index, 1);
+    setFormData({ ...formData, timeSlots: newTimeSlots });
+  };
+
   const handleInputChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    if (e.target.name === 'totalRating') {
+      setFormData({ ...formData, totalRating: parseInt(e.target.value) });
+    }
+    // if (e.target.name === 'qualifications' || e.target.name === 'experiences') {
+    //   const newArray = e.target.value.split('\n').map((item) => item.trim());
+      // setFormData({ ...formData, [e.target.name]: newArray });
+    // } 
+    else if (e.target.name === 'timeSlots') {
+      // Handle dynamic time slots separately
+      handleTimeSlotChange(e);
+    } else {
+      setFormData({ ...formData, [e.target.name]: e.target.value });
+    }
   };
 
   const handleFileInputChange = async event => {
@@ -40,33 +70,33 @@ const Signup = () => {
 
   const submitHandler = async (event) => {
     event.preventDefault();
-    setLoading(true)
-
+    setLoading(true);
+// console.log(formData)
     try {
-      const res = await fetch(`${BASE_URL}/auth/register`,{
-        method:'post',
-        headers:{
-          'Content-Type':'application/json'
+      // console.log(formData)
+      const res = await fetch(`${BASE_URL}/auth/register`, {
+        method: 'post',
+        headers: {
+          'Content-Type': 'application/json',
         },
-        body:JSON.stringify(formData)
-      })
+        body: JSON.stringify({
+          ...formData
+        }),
+      });
 
-      const {message} = await res.json()
+      const { message } = await res.json();
 
-      if(!res.ok){
-        throw new Error(message)
+      if (!res.ok) {
+        throw new Error(message);
       }
 
-      setLoading(false)
-      toast.success(message)
-      navigate('/login')
-
+      setLoading(false);
+      toast.success(message);
+      navigate('/login');
     } catch (err) {
-      toast.error(err.message)
-      setLoading(false)
+      toast.error(err.message);
+      setLoading(false);
     }
-
-    
   };
 
   return (
@@ -132,6 +162,65 @@ const Signup = () => {
                   </select>
                 </label>
               </div>
+              {formData.role==="doctor" && (
+
+                <div>
+                  <div className="mb-5">
+                    <label className="text-headingColor font-bold text-[16px] leading-7">
+                      Total Rating:
+                      <input
+                        type="number"
+                        placeholder="Enter total rating"
+                        name="totalRating"
+                        value={formData.totalRating}
+                        onChange={handleInputChange}
+                        className="w-full pr-4 py-3 border-b border-solid border-[#0066ff61] focus:outline-none focus:border-b-primaryColor text-[16px] leading-7 text-headingColor placeholder-textColor cursor-pointer"
+                        required
+                      />
+                    </label>
+                  </div>
+
+                  <textarea
+                    placeholder="Qualifications (Enter each qualification on a new line)"
+                    name="qualifications"
+                    value={formData.qualifications}
+                    onChange={handleInputChange}
+                    className="w-full pr-4 py-3 border-b border-solid border-[#0066ff61] focus:outline-none focus:border-b-primaryColor text-[16px] leading-7 text-headingColor placeholder-textColor cursor-pointer"
+                    required
+                  />
+                  <div className="mb-5">
+                    <label className="text-headingColor font-bold text-[16px] leading-7 mb-2">
+                      Time Slots:
+                    </label>
+                    {formData.timeSlots.map((timeSlot, index) => (
+                      <div key={index} className="flex items-center mb-2">
+                        <input
+                          type="text"
+                          placeholder={`Time Slot ${index + 1}`}
+                          value={timeSlot}
+                          onChange={(e) => handleTimeSlotChange(e, index)}
+                          className="w-full pr-4 py-3 border-b border-solid border-[#0066ff61] focus:outline-none focus:border-b-primaryColor text-[16px] leading-7 text-headingColor placeholder-textColor cursor-pointer"
+                          required
+                        />
+                        {index > 0 && (
+                          <button
+                            type="button"
+                            onClick={() => removeTimeSlot(index)}
+                            className="ml-2 px-4 py-2 bg-red-500 text-white rounded"
+                          >
+                            Remove
+                          </button>
+                        )}
+                      </div>
+                    ))}
+                    <button type="button" onClick={addTimeSlot} className="px-4 py-2 bg-green-500 text-white rounded">
+                      Add Time Slot
+                    </button>
+                  </div>
+                </div>
+                
+
+              )}
               <div className="mb-5 flex items-center justify-between">
                 <label className="text-headingColor font-bold text-[16px] leading-7">
                   Gender:
