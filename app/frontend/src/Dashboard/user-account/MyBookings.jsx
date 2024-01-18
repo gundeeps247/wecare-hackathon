@@ -13,7 +13,7 @@ const MyBookings = () => {
   return (
 
     <div>
-    {console.log(appointments)}
+ 
       {loading && !error && <Loading/>}
 
       {error && !loading && <Error errorMessage={error}/>} 
@@ -25,7 +25,7 @@ const MyBookings = () => {
            ))}
               </div>
         )}
-        {console.log("hello",error)}
+
       {!loading && appointments.length ===0 && 
           <h2 className='mt-5 text-center leading -7 texxt-[20px] font-semibold text-primaryColor'>you did not book any doctor yet!</h2>}
     </div>
