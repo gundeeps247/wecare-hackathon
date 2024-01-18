@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 
-import { authContext } from "./../../context/authContext";
+import { authContext } from "./../../context/AuthContext";
 
 import MyBookings from "./MyBookings";
 import Profile from "./Profile";
