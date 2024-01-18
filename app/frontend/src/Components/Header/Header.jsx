@@ -23,7 +23,7 @@ const navLink = [
     display: 'Nearby',
   },
   {
-    path: 'https://ghost-rkn5.vercel.app/', 
+    path: 'https://curacare.vercel.app/', 
     display: 'Meet',
   },
   {
