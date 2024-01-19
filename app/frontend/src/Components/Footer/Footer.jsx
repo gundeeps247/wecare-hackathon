@@ -90,14 +90,14 @@ const quickLinks03 = [
         <div>
           <img src={logo} alt="" />
           <p className='text-[16px] leading-7 font-[400] text-textColor mt-4 '>
-            Copyright © {year} developed by Muhibur Rahman all rights reserved. </p>
+              Copyright © {year} developed by <b>Team Genconians </b> all rights reserved. </p>
           <div className='flex items-center'>
             {socialLink.map((link,index)=>(
               <Link 
                 to= {link.path} 
                 key={index}
                 className='w-9 h-9 border border-solid border-[#181A1E] rounded-full flex items-center
-                justify-center group hover:bg-primaryColor hover:border-none'
+                justify-center group hover:bg-primaryColor hover:border-none mr-2'
                 >
               {link.icon}
 

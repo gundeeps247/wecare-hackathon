@@ -1,4 +1,5 @@
 import React from "react";
+import { useContext, useState } from "react";
 
 import heroImg01 from "../assets/images/hero-img01.png";
 import heroImg02 from "../assets/images/hero-img02.png";
@@ -10,6 +11,8 @@ import featureImg from "../assets/images/feature-img.png";
 import faqImg from "../assets/images/faq-img.png";
 import videoIcon from "../assets/images/video-icon.png";
 import avatarIcon from "../assets/images/avatar-icon.png";
+import useGetProfile from '../hooks/useFetchData';
+import { BASE_URL } from '../config';
 import { Link } from "react-router-dom";
 import { BsArrowRight } from "react-icons/bs";
 import About from "../components/About/About";
@@ -19,8 +22,18 @@ import FaqList from "../components/Faq/FaqList";
 import Testimonial from "../Components/Testimonial/Testimonial";
 
 const Home = () => {
+  const { data: doctorData,
+
+  } = useGetProfile(`${BASE_URL}/doctors/profile/me`);
+  const { data: userData,
+
+  } = useGetProfile(`${BASE_URL}/users/profile/me`);
+
+  { console.log("user", userData) }
+  (console.log("doctor", doctorData))
   return (
     <>
+   
       {/* =========== hero section ======== */}
 
       <section className="hero__section pt-[60px] 2xl:h-[800px]">
@@ -41,7 +54,8 @@ const Home = () => {
                   text. It was popularised in the 1960s with containing Lorem
                   Ipsum.
                 </p>
-                <button className="btn">Request an Appointment</button>
+                {userData.role && <button className="btn">Request an Appointment</button>}
+                
               </div>
 
               {/* ============== hero counter ================================= */}
