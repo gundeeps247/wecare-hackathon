@@ -16,12 +16,13 @@ const useFetchData = (url) => {
             const response = await fetch(url, {
                 headers: {Authorization: `Bearer ${token}`},
                 });
+
                 const result = await response.json()
+
                 if(!response.ok){
                     throw new Error(result.message+"🤢")
                 }
             
-        
                 setData(result.data)
                 setLoading(false)
             }catch (err) {

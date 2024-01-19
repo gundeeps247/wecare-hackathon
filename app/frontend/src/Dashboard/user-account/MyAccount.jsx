@@ -16,8 +16,6 @@ const MyAccount = () => {
      error 
   } = useGetProfile(`${BASE_URL}/users/profile/me`); 
   
-
-
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
   };
