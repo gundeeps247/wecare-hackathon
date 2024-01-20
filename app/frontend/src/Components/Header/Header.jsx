@@ -27,8 +27,8 @@ const navLink = [
     display: 'Meet',
   },
   {
-    path: 'https://qrhospitals.netlify.app', 
-    display: 'QR Code',
+    path: '/book/', 
+    display: 'Book Appointment',
   },
   {
     path: '/hospital', 
