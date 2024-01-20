@@ -30,6 +30,10 @@ const navLink = [
     path: 'https://qrhospitals.netlify.app', 
     display: 'QR Code',
   },
+  {
+    path: '/hospital', 
+    display: 'Hospital',
+  },
 ]
 
 const Header = () => {
