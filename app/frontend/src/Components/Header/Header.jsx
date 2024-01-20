@@ -34,6 +34,14 @@ const navLink = [
     path: '/hospital', 
     display: 'Hospital',
   },
+  {
+    path: '/h', 
+    display: 'Virtual Assessment',
+  },
+  {
+    path: '/hospital', 
+    display: 'Reports',
+  },
 ]
 
 const Header = () => {

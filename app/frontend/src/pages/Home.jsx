@@ -49,10 +49,7 @@ const Home = () => {
                   We help patients live a healthy, longer life.
                 </h1>
                 <p className="text__para">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Has been the industry standard dummy
-                  text. It was popularised in the 1960s with containing Lorem
-                  Ipsum.
+                Welcome to our comprehensive doctor appointment platform, where we connect patients with trusted healthcare professionals. Seamlessly schedule appointments, explore specialized doctors, and prioritize your well-being with our user-friendly and efficient online service.
                 </p>
                 {userData.role && <button className="btn">Request an Appointment</button>}
                 
@@ -136,8 +133,7 @@ const Home = () => {
                   Find a Doctor
                 </h2>
                 <p className="text-[16px] leading-7 text-textcolor font-[400] mt-4 text-center">
-                  Word-class care for everyone. Our health System offers
-                  unmatched, expert health care. From the lab to the clinic.
+                "Locate health services effortlessly with our 'Find a Location' feature. Whether it's a nearby pharmacy or a specialist clinic, access reliable healthcare resources at your fingertips for convenience and care."
                 </p>
 
                 <Link
@@ -158,8 +154,7 @@ const Home = () => {
                   Find a Location
                 </h2>
                 <p className="text-[16px] leading-7 text-textcolor font-[400] mt-4 text-center">
-                  Word-class care for everyone. Our health System offers
-                  unmatched, expert health care. From the lab to the clinic.
+                "Locate health services effortlessly with our 'Find a Location' feature. Whether it's a nearby pharmacy or a specialist clinic, access reliable healthcare resources at your fingertips for convenience and care."
                 </p>
 
                 <Link
@@ -180,8 +175,7 @@ const Home = () => {
                   Book Appointment
                 </h2>
                 <p className="text-[16px] leading-7 text-textcolor font-[400] mt-4 text-center">
-                  Word-class care for everyone. Our health System offers
-                  unmatched, expert health care. From the lab to the clinic.
+                "Seamlessly schedule healthcare appointments with our 'Book Appointment' feature. Enjoy hassle-free booking, set reminders, and ensure timely access to medical professionals for personalized and convenient healthcare experiences."
                 </p>
 
                 <Link

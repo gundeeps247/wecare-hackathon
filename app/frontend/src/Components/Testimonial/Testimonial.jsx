@@ -41,7 +41,7 @@ const Testimonial = () => {
               <img src={patientAvatar} alt='' />
               <div>
                 <h4 className='text-[18px] leading-[30px] font-semibold text-headingColor'>
-                  Muhibur Rahman
+                  MANNANT SINGH
                 </h4>
                 <div className='flex items-center gap-[2px]'>
                   <HiStar className='text-yellowColor w-[18px] h-5' />
@@ -63,7 +63,7 @@ const Testimonial = () => {
               <img src={patientAvatar} alt='' />
               <div>
                 <h4 className='text-[18px] leading-[30px] font-semibold text-headingColor'>
-                  Muhibur Rahman
+                  ABHI RAJ
                 </h4>
                 <div className='flex items-center gap-[2px]'>
                   <HiStar className='text-yellowColor w-[18px] h-5' />
@@ -75,7 +75,7 @@ const Testimonial = () => {
               </div>
             </div>
             <p className='text-[16px] leading-7 mt-4 text-textColor font-[400]'>
-              "I have taken medical service"
+              " Services are good"
             </p>
           </div>
         </SwiperSlide>
@@ -85,7 +85,7 @@ const Testimonial = () => {
               <img src={patientAvatar} alt='' />
               <div>
                 <h4 className='text-[18px] leading-[30px] font-semibold text-headingColor'>
-                  Muhibur Rahman
+                  JAI GARG
                 </h4>
                 <div className='flex items-center gap-[2px]'>
                   <HiStar className='text-yellowColor w-[18px] h-5' />
@@ -97,7 +97,7 @@ const Testimonial = () => {
               </div>
             </div>
             <p className='text-[16px] leading-7 mt-4 text-textColor font-[400]'>
-              "I have taken medical service"
+              "Profesional doctors"
             </p>
           </div>
         </SwiperSlide>
@@ -107,7 +107,7 @@ const Testimonial = () => {
               <img src={patientAvatar} alt='' />
               <div>
                 <h4 className='text-[18px] leading-[30px] font-semibold text-headingColor'>
-                  Muhibur Rahman
+                  RAYI VERMA
                 </h4>
                 <div className='flex items-center gap-[2px]'>
                   <HiStar className='text-yellowColor w-[18px] h-5' />
@@ -119,7 +119,7 @@ const Testimonial = () => {
               </div>
             </div>
             <p className='text-[16px] leading-7 mt-4 text-textColor font-[400]'>
-              "I have taken medical service"
+              "VERY GOOD SERVICE"
             </p>
           </div>
         </SwiperSlide>

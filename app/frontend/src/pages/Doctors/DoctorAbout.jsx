@@ -7,15 +7,17 @@ const DoctorAbout = () => {
         <h3 className="text-[20px] leading-[30px] text-headingColor font-semibold flex items-center gap-2">
           About of
           <span className="text-irisBlueColor font-bold text-[24px] leading-9">
-            Muhibur Rahman
+            DR RAJ PATEL
           </span>
         </h3>
         <p className="text_para">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis eius
-          consectetur velit illo ullam animi necessitatibus vero voluptatum fuga
-          consequuntur, aspernatur perspiciatis adipisci. Necessitatibus et non
-          wwwwwwww sapiente sit distinctio repellat illo totam perspiciatis, inventore
-          AAAAAAAAAAAAAAAA ex assumenda odit natus cumque saepe nostrum?
+        Raj Patel, an experienced MBBS labor and delivery doctor, specializes in providing compassionate care during childbirth. His expertise encompasses managing diverse cases, ensuring safe deliveries, and prioritizing maternal and neonatal well-being.
+
+
+
+
+
+
         </p>
       </div>
       <div className="mt-12">
@@ -27,7 +29,7 @@ const DoctorAbout = () => {
               {formatDate("07-04-2010")} - {formatDate("09-04-2010")}
               </span>
               <p className="text-[16px] leading-6 font-medium text-textColor">
-                PHD in Surgeon
+                PHD in Labour
               </p>
             </div>
             <p className="text-[14px] leading-5 font-medium text-textColor">
