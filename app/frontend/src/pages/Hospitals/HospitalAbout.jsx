@@ -83,4 +83,4 @@ const HospitalAbout = () => {
   );
 };
 
-export default DoctorAbout;
+export default HospitalAbout;
