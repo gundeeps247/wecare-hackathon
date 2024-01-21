@@ -1,0 +1,31 @@
+{
+    "zones": {
+      "Zone1": ["Area1", "Area2"],
+      "Zone2": ["Area3", "Area4"]
+    },
+    "pharmacies": [
+      {
+        "name": "Pharmacy 1",
+        "address": "Address 1",
+        "closingTime": "18:00",
+        "phoneNumber": "123-456-7890",
+        "zone": "Zone1",
+        "directionsLink": "https://maps.google.com/?q=Pharmacy1"
+      },
+      {
+        "name": "Pharmacy 2",
+        "address": "Address 2",
+        "closingTime": "20:00",
+        "phoneNumber": "987-654-3210",
+        "zone": "Zone2",
+        "directionsLink": "https://maps.google.com/?q=Pharmacy2"
+      }
+    ]
+  }
+
+
+
+
+
+ 
+  
