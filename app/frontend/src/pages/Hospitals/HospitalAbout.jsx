@@ -7,15 +7,11 @@ const HospitalAbout = () => {
         <h3 className="text-[20px] leading-[30px] text-headingColor font-semibold flex items-center gap-2">
           About of
           <span className="text-irisBlueColor font-bold text-[24px] leading-9">
-            Muhibur Rahman
+          ROHIT SHARMA
           </span>
         </h3>
         <p className="text_para">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis eius
-          consectetur velit illo ullam animi necessitatibus vero voluptatum fuga
-          consequuntur, aspernatur perspiciatis adipisci. Necessitatibus et non
-          wwwwwwww sapiente sit distinctio repellat illo totam perspiciatis, inventore
-          AAAAAAAAAAAAAAAA ex assumenda odit natus cumque saepe nostrum?
+        Rohit Sharma, a dedicated cancer specialist, possesses extensive expertise in oncology. Known for compassionate patient care, Dr. Sharma combines advanced medical knowledge with a commitment to innovative treatments, contributing significantly to cancer research and treatment advancements.
         </p>
       </div>
       <div className="mt-12">
