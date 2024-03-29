@@ -33,7 +33,7 @@ const Book = () => {
   useEffect(() => {
     const fetchDoctors = async () => {
       try {
-        const response = await axios.get('http://localhost:5001/api/v1/doctors');
+        const response = await axios.get('https://hospital-wgj8.onrender.com/api/v1/doctors');
         setDoctors(response.data.data);
       } catch (error) {
         console.error('Error fetching doctors:', error);

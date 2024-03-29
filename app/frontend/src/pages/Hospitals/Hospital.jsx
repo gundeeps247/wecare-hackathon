@@ -8,7 +8,7 @@ const Hospitals = () => {
   useEffect(() => {
     const fetchHospitals = async () => {
       try {
-        const response = await axios.get('http://localhost:5001/api/v1/hospitals');
+        const response = await axios.get('https://hospital-wgj8.onrender.com/api/v1/hospitals');
         // console.log(response.data)
         setHospitals(response.data.data);
    // Assuming your API response is an array of doctors
