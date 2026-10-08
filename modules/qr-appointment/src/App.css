@@ -1,0 +1,84 @@
+/* src/App.css */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('../public/AI_Generated_Image_2024-01-18_443263178024201.png') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 85%;
+  max-width: 600px;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.9); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjusted box-shadow for a more subtle effect */
+  border-radius: 8px;
+  text-align: center; /* Center text within the container */
+}
+
+h1 {
+  color: #007bff; /* Adjusted color for a more professional look */
+  margin-bottom: 20px;
+  font-size: 24px; /* Increased font size for emphasis */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+input,
+select,
+textarea {
+  margin-bottom: 16px;
+  padding: 12px; /* Increased padding for better input field appearance */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  font-size: 16px;
+}
+
+button {
+  padding: 14px; /* Increased padding for a more prominent button */
+  background-color: #0056b3;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #004080; /* Darkened color on hover for a subtle effect */
+}
+
+img {
+  max-width: 100%;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1080px) {
+  .container {
+    width: 80%;
+  }
+}
